@@ -1,11 +1,11 @@
-import './App.css';
-
+import "./App.css";
+import Layout from "./components/layout";
 function App() {
-  return (
-    <div className="App">
-   HELLO TASK BOARD
-    </div>
-  );
+    return (
+        <div className="App">
+            <Layout />
+        </div>
+    );
 }
 
 export default App;
