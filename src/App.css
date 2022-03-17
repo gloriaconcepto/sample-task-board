@@ -92,3 +92,39 @@
   margin-top: 4px;
   position: absolute;
 }
+
+.layout-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.side-bar-countainer{
+  width: fit-content;
+  background: #FCFCFC;
+  height: 100vh;
+}
+
+.main-app-container{
+  margin-left: 6rem;
+  margin-top: 2rem;
+}
+
+.side-bar-countainer-items{
+  padding-left: 17px;
+    /* padding-right: 150px; */
+    padding-top: 1rem;
+}
+
+.side-bar-countainer-top-item{
+  display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.side-bar-countainer-name{
+  margin-left: 12px;
+  margin-top: 4px;
+  font-weight: bolder;
+  /* opacity: 0.4; */
+  font-size: 22px;
+}

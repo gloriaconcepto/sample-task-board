@@ -6,10 +6,14 @@ const Layout = memo((props) => {
     useEffect(() => {}, []);
 
     return (
-        <React.Fragment>
-            <Headers />
-            <Sidebar />
-        </React.Fragment>
+        <div className="layout-container">
+            <section className="side-bar-countainer">
+                <Sidebar />
+            </section>
+            <section style={{ width: "100%" }}>
+                <Headers />
+            </section>
+        </div>
     );
 });
 
