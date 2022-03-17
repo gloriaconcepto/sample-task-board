@@ -5,7 +5,11 @@ const Headers = memo((props) => {
 
     return (
         <React.Fragment>
-            <p>Header</p>
+            <div className="header-container">
+                <section className="header-container-items">Header</section>
+                <section className="header-container-items">Header</section>
+                <section className="header-container-items">Header</section>
+            </div>
         </React.Fragment>
     );
 });
