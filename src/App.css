@@ -143,3 +143,34 @@
   justify-content: space-between;
 
 }
+
+.month-calendar-container{
+  width: 95%;
+
+  /* background-color: #d1d0e3; */
+}
+.month-calendar-container-one{
+  display: flex;
+  justify-content: space-between;
+}
+.month-calendar-container-day{
+  opacity: 0.3;
+}
+.month-calendar-container-day-active{
+   background-color: #346BF8;
+    width: 3rem;
+    height: 23.5px;
+    border-radius: 7px;
+    padding-top: 2px;
+    padding-left: 16px;
+    color: white;
+   
+}
+
+.vertical-line{
+  display: inline-block;
+  border-left: 1px solid #ccc;
+  /* margin: 0 10px; */
+  height: 100vh;
+
+}

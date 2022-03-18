@@ -6,6 +6,7 @@ import PushPinIcon from "@mui/icons-material/PushPin";
 import MarkAsUnreadSharpIcon from "@mui/icons-material/MarkAsUnreadSharp";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { sideBarTitleContext } from "./index";
+import DashboardManager from "../dashboard/DashBoard";
 const Headers = memo((props) => {
     const { barTitle} = useContext(sideBarTitleContext);
     const [invisible, setInvisible] = useState(false);
@@ -47,7 +48,7 @@ const Headers = memo((props) => {
                     </section>
                 </section>
             </div>
-            <div className="main-app-container">hello world</div>
+            <div className="main-app-container"><DashboardManager/></div>
         </React.Fragment>
     );
 });
