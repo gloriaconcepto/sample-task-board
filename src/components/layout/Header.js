@@ -1,12 +1,13 @@
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useEffect, useState, useContext } from "react";
 import CycloneIcon from "@mui/icons-material/Cyclone";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Badge from "@mui/material/Badge";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import MarkAsUnreadSharpIcon from "@mui/icons-material/MarkAsUnreadSharp";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
+import { sideBarTitleContext } from "./index";
 const Headers = memo((props) => {
+    const { barTitle, setBarTitle } = useContext(sideBarTitleContext);
     const [invisible, setInvisible] = useState(false);
     useEffect(() => {}, []);
 
@@ -16,7 +17,7 @@ const Headers = memo((props) => {
                 <section className="header-container-items">
                     {" "}
                     <section className="header-container-sub-item" style={{ marginLeft: "2rem", fontWeight: "bold" }}>
-                        SideBar Name
+                        {barTitle}
                     </section>
                     <section className="header-container-sub-item header-container-arrow-left">
                         <ArrowForwardIosIcon sx={{ opacity: 0.2, fontSize: 20 }} />
