@@ -7,10 +7,11 @@ export const sideBarTitleContext = createContext({
     setBarTitle: () => {},
 });
 const Layout = memo((props) => {
+    const [barTitle, setBarTitle] = useState("Dashboard");
     useEffect(() => {}, []);
 
     return (
-        <sideBarTitleContext.Provider value={{ barTitle: "Dashboard" }}>
+        <sideBarTitleContext.Provider value={{ barTitle, setBarTitle }}>
             <div className="layout-container">
                 <section className="side-bar-countainer">
                     <Sidebar />

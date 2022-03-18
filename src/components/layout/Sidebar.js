@@ -1,5 +1,5 @@
 import { spacing } from "@mui/system";
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useEffect, useState, useContext } from "react";
 import MenuList from "@mui/material/MenuList";
 import MenuItem from "@mui/material/MenuItem";
 import PixIcon from "@mui/icons-material/Pix";
@@ -9,11 +9,16 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import CircleIcon from "@mui/icons-material/Circle";
 import AddCircleSharpIcon from "@mui/icons-material/AddCircleSharp";
 import { sidebarMenus } from "../../utilities/constants";
+import { sideBarTitleContext } from "./index";
 //    transform: rotate(270deg);
 const Sidebar = memo((props) => {
+    const  {setBarTitle} = useContext(sideBarTitleContext);
     const [pushPosition, setPushPosition] = useState(70);
     useEffect(() => {}, []);
-
+    const menusClick = (sideBarName, key) => {
+        console.log({ sideBarName, key });
+        setBarTitle(sideBarName);
+    };
     return (
         <React.Fragment>
             <section className="side-bar-countainer-items">
@@ -32,7 +37,7 @@ const Sidebar = memo((props) => {
 
                 <MenuList>
                     {sidebarMenus.map((value) => (
-                        <MenuItem key={value.id} sx={{ marginBottom: "1rem" }}>
+                        <MenuItem key={value.id} sx={{ marginBottom: "1rem" }} onClick={() => menusClick(value.name, value.id)}>
                             {value.name === "Analytics" ? (
                                 <>
                                     <ListItemIcon>{value.icon}</ListItemIcon>

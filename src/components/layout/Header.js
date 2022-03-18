@@ -7,7 +7,7 @@ import MarkAsUnreadSharpIcon from "@mui/icons-material/MarkAsUnreadSharp";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { sideBarTitleContext } from "./index";
 const Headers = memo((props) => {
-    const { barTitle, setBarTitle } = useContext(sideBarTitleContext);
+    const { barTitle} = useContext(sideBarTitleContext);
     const [invisible, setInvisible] = useState(false);
     useEffect(() => {}, []);
 
