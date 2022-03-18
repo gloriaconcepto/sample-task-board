@@ -1,102 +1,52 @@
+import { valueToPercent } from "@mui/base";
 import React, { memo, useEffect, useState, useContext } from "react";
-
+import { getDay } from "../../utilities/dateFunctions";
 const MonthManager = memo((props) => {
-    
-    useEffect(() => {}, []);
-    
+    const [daysNums, setDaysNums] = useState([]);
+    const activeDay = getDay(0, true);
+    const activeDayPosition = 10;
+
+    useEffect(() => {
+        for (let i = 9; i >= 0; i--) {
+            if (i < activeDayPosition) {
+                let day = getDay(i, true);
+
+                setDaysNums((arr) => [...arr, day]);
+            }
+        }
+        //do for future days
+        for (let k = 1; k <= 7; k++) {
+            let newDay = getDay(k, false);
+            setDaysNums((arr) => [...arr, newDay]);
+        }
+    }, []);
+    const dividerGrid = () => {
+        let divGrid = [];
+        for (let i = 1; i <= 17; i++) {
+            divGrid.push(<span className="vertical-line" key={i}></span>);
+        }
+        return divGrid;
+    };
     return (
         <React.Fragment>
             <div className="month-calendar-container">
                 <section className="month-calendar-container-one">
-                    <div>
-                        <span className="month-calendar-container-day">T</span>
-                        <span>11</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">F</span>
-                        <span>12</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">T</span>
-                        <span>13</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">F</span>
-                        <span>14</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">T</span>
-                        <span>15</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">F</span>
-                        <span>16</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">T</span>
-                        <span>17</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">F</span>
-                        <span>18</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">T</span>
-                        <span>19</span>
-                    </div>
-                    <div className="month-calendar-container-day-active">
-                        <span>F</span>
-                        <span>20</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">T</span>
-                        <span>11</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">F</span>
-                        <span>12</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">T</span>
-                        <span>11</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">F</span>
-                        <span>12</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">T</span>
-                        <span>11</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">F</span>
-                        <span>12</span>
-                    </div>
-                    <div>
-                        <span className="month-calendar-container-day">F</span>
-                        <span>12</span>
-                    </div>
+                    {daysNums &&
+                        daysNums.map((val, id) =>
+                            val === activeDay ? (
+                                <div key={id} div className="month-calendar-container-day-active">
+                                    <span>T</span>
+                                    <span>{val}</span>
+                                </div>
+                            ) : (
+                                <div key={id}>
+                                    <span className="month-calendar-container-day">T</span>
+                                    <span>{val}</span>
+                                </div>
+                            )
+                        )}
                 </section>
-                <section className="month-calendar-container-one">
-             
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                    <span className="vertical-line"></span>
-                </section>
+                <section className="month-calendar-container-one">{dividerGrid()}</section>
             </div>
         </React.Fragment>
     );
