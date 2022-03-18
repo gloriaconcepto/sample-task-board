@@ -1,7 +1,14 @@
 import { spacing } from "@mui/system";
 import React, { memo, useEffect, useState } from "react";
+import MenuList from "@mui/material/MenuList";
+import MenuItem from "@mui/material/MenuItem";
 import PixIcon from "@mui/icons-material/Pix";
 import VerticalAlignTopIcon from "@mui/icons-material/VerticalAlignTop";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import CircleIcon from "@mui/icons-material/Circle";
+import AddCircleSharpIcon from "@mui/icons-material/AddCircleSharp";
+import { sidebarMenus } from "../../utilities/constants";
 //    transform: rotate(270deg);
 const Sidebar = memo((props) => {
     const [pushPosition, setPushPosition] = useState(70);
@@ -20,6 +27,36 @@ const Sidebar = memo((props) => {
 
                     <div style={{ marginLeft: `${pushPosition}px`, cursor: "pointer" }}>
                         <VerticalAlignTopIcon sx={{ transform: "rotate(270deg)" }} />
+                    </div>
+                </section>
+
+                <MenuList>
+                    {sidebarMenus.map((value) => (
+                        <MenuItem key={value.id} sx={{ marginBottom: "1rem" }}>
+                            {value.name === "Analytics" ? (
+                                <>
+                                    <ListItemIcon>{value.icon}</ListItemIcon>
+                                    <ListItemText>
+                                        {" "}
+                                        {value.name} <CircleIcon sx={{ color: "red", fontSize: 8, marginLeft: "4rem" }} />
+                                    </ListItemText>
+                                </>
+                            ) : (
+                                <>
+                                    <ListItemIcon>{value.icon}</ListItemIcon>
+                                    <ListItemText> {value.name}</ListItemText>
+                                </>
+                            )}
+                        </MenuItem>
+                    ))}
+                </MenuList>
+                <section className="side-bar-countainer-create-task">
+                    <div>
+                        <p>Create</p>
+                        <p style={{ marginTop: "-1rem" }}>new task</p>
+                    </div>
+                    <div style={{ paddingTop: "13px" }}>
+                        <AddCircleSharpIcon sx={{ color: "#346BF8", fontSize: 46 }} />
                     </div>
                 </section>
             </section>

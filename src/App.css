@@ -110,7 +110,7 @@
 }
 
 .side-bar-countainer-items{
-  padding-left: 17px;
+  /* padding-left: 17px; */
     /* padding-right: 150px; */
     padding-top: 1rem;
 }
@@ -119,12 +119,27 @@
   display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-bottom: 2rem;
 }
 
 .side-bar-countainer-name{
   margin-left: 12px;
-  margin-top: 4px;
+  margin-top: -2px;
   font-weight: bolder;
-  /* opacity: 0.4; */
-  font-size: 22px;
+  opacity: 0.8;
+  font-size: 29px;
+  color: #404040;
+}
+.side-bar-countainer-create-task{
+  background: #EEF2FB;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  display: flex;
+  justify-content: space-between;
+
 }
