@@ -15,23 +15,29 @@ const Sidebar = memo((props) => {
     const { setBarTitle } = useContext(sideBarTitleContext);
     const [pushPosition, setPushPosition] = useState(70);
     const [key, setKey] = useState(1);
+    const [isCollapse, setCollapse] = useState(false);
     useEffect(() => {}, []);
     const menusClick = (sideBarName, key) => {
         setBarTitle(sideBarName);
         setKey(key);
+    };
+    const collapseSideBar = () => {
+        setCollapse(!isCollapse);
     };
     return (
         <React.Fragment>
             <section className="side-bar-countainer-items">
                 <section className="side-bar-countainer-top-item">
                     <div style={{ display: "flex" }}>
-                        <span>
-                            <PixIcon sx={{ color: "#346BF8", fontSize: 40 }} />
-                        </span>
-                        <span className="side-bar-countainer-name">PJ</span>
+                        {!isCollapse && (
+                            <span>
+                                <PixIcon sx={{ color: "#346BF8", fontSize: 40 }} />
+                            </span>
+                        )}
+                        {!isCollapse && <span className="side-bar-countainer-name">PJ</span>}
                     </div>
 
-                    <div style={{ marginLeft: `${pushPosition}px`, cursor: "pointer" }}>
+                    <div style={{ marginRight: "2rem", cursor: "pointer" }} onClick={() => collapseSideBar()}>
                         <VerticalAlignTopIcon sx={{ transform: "rotate(270deg)" }} />
                     </div>
                 </section>
@@ -42,29 +48,33 @@ const Sidebar = memo((props) => {
                             {value.name === "Analytics" ? (
                                 <>
                                     <ListItemIcon sx={{ color: key === value.id ? "#346BF8" : null }}>{value.icon}</ListItemIcon>
-                                    <ListItemText>
-                                        {" "}
-                                        {value.name} <CircleIcon sx={{ color: "red", fontSize: 8, marginLeft: "4rem" }} />
-                                    </ListItemText>
+                                    {!isCollapse && (
+                                        <ListItemText>
+                                            {" "}
+                                            {value.name} <CircleIcon sx={{ color: "red", fontSize: 8, marginLeft: "4rem" }} />
+                                        </ListItemText>
+                                    )}
                                 </>
                             ) : (
                                 <>
                                     <ListItemIcon sx={{ color: key === value.id ? "#346BF8" : null }}>{value.icon}</ListItemIcon>
-                                    <ListItemText> {value.name}</ListItemText>
+                                    {!isCollapse && <ListItemText> {value.name}</ListItemText>}
                                 </>
                             )}
                         </MenuItem>
                     ))}
                 </MenuList>
-                <section className="side-bar-countainer-create-task">
-                    <div>
-                        <p>Create</p>
-                        <p style={{ marginTop: "-1rem" }}>new task</p>
-                    </div>
-                    <div style={{ paddingTop: "13px" }}>
-                        <AddCircleSharpIcon sx={{ color: "#346BF8", fontSize: 46 }} />
-                    </div>
-                </section>
+                {!isCollapse && (
+                    <section className="side-bar-countainer-create-task">
+                        <div>
+                            <p>Create</p>
+                            <p style={{ marginTop: "-1rem" }}>new task</p>
+                        </div>
+                        <div style={{ paddingTop: "13px" }}>
+                            <AddCircleSharpIcon sx={{ color: "#346BF8", fontSize: 46 }} />
+                        </div>
+                    </section>
+                )}
             </section>
         </React.Fragment>
     );
