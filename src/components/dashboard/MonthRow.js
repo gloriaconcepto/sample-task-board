@@ -1,8 +1,8 @@
-import { valueToPercent } from "@mui/base";
 import React, { memo, useEffect, useState, useContext } from "react";
-import { getDay } from "../../utilities/dateFunctions";
+import { getDay, getDayName } from "../../utilities/dateFunctions";
 const MonthManager = memo((props) => {
     const [daysNums, setDaysNums] = useState([]);
+    const [daysNames, setDaysNames] = useState([]);
     const activeDay = getDay(0, true);
     const activeDayPosition = 10;
 
@@ -10,14 +10,17 @@ const MonthManager = memo((props) => {
         for (let i = 9; i >= 0; i--) {
             if (i < activeDayPosition) {
                 let day = getDay(i, true);
-
+                let name = getDayName(i, true);
                 setDaysNums((arr) => [...arr, day]);
+                setDaysNames((arr) => [...arr, name]);
             }
         }
         //do for future days
         for (let k = 1; k <= 7; k++) {
             let newDay = getDay(k, false);
+            let newName = getDayName(k, false);
             setDaysNums((arr) => [...arr, newDay]);
+            setDaysNames((arr) => [...arr, newName]);
         }
     }, []);
     const dividerGrid = () => {
@@ -35,12 +38,12 @@ const MonthManager = memo((props) => {
                         daysNums.map((val, id) =>
                             val === activeDay ? (
                                 <div key={id} div className="month-calendar-container-day-active">
-                                    <span>T</span>
+                                    <span>{daysNames[id]}</span>
                                     <span>{val}</span>
                                 </div>
                             ) : (
                                 <div key={id}>
-                                    <span className="month-calendar-container-day">T</span>
+                                    <span className="month-calendar-container-day">{daysNames[id]}</span>
                                     <span>{val}</span>
                                 </div>
                             )
