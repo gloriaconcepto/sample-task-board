@@ -12,12 +12,13 @@ import { sidebarMenus } from "../../utilities/constants";
 import { sideBarTitleContext } from "./index";
 //    transform: rotate(270deg);
 const Sidebar = memo((props) => {
-    const  {setBarTitle} = useContext(sideBarTitleContext);
+    const { setBarTitle } = useContext(sideBarTitleContext);
     const [pushPosition, setPushPosition] = useState(70);
+    const [key, setKey] = useState(1);
     useEffect(() => {}, []);
     const menusClick = (sideBarName, key) => {
-        console.log({ sideBarName, key });
         setBarTitle(sideBarName);
+        setKey(key);
     };
     return (
         <React.Fragment>
@@ -37,10 +38,10 @@ const Sidebar = memo((props) => {
 
                 <MenuList>
                     {sidebarMenus.map((value) => (
-                        <MenuItem key={value.id} sx={{ marginBottom: "1rem" }} onClick={() => menusClick(value.name, value.id)}>
+                        <MenuItem key={value.id} sx={{ marginBottom: "1rem", color: key === value.id ? "#346BF8" : null }} onClick={() => menusClick(value.name, value.id)}>
                             {value.name === "Analytics" ? (
                                 <>
-                                    <ListItemIcon>{value.icon}</ListItemIcon>
+                                    <ListItemIcon sx={{ color: key === value.id ? "#346BF8" : null }}>{value.icon}</ListItemIcon>
                                     <ListItemText>
                                         {" "}
                                         {value.name} <CircleIcon sx={{ color: "red", fontSize: 8, marginLeft: "4rem" }} />
@@ -48,7 +49,7 @@ const Sidebar = memo((props) => {
                                 </>
                             ) : (
                                 <>
-                                    <ListItemIcon>{value.icon}</ListItemIcon>
+                                    <ListItemIcon sx={{ color: key === value.id ? "#346BF8" : null }}>{value.icon}</ListItemIcon>
                                     <ListItemText> {value.name}</ListItemText>
                                 </>
                             )}
