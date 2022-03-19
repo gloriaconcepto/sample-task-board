@@ -101,7 +101,7 @@
 .side-bar-countainer{
   width: fit-content;
   background: #FCFCFC;
-  height: 100vh;
+  height: 300vh;
 }
 
 .main-app-container{
@@ -171,7 +171,7 @@
   display: inline-block;
   border-left: 1px solid #ccc;
   /* margin: 0 10px; */
-  height: 100vh;
+  height: 300vh;
   opacity: 0.3;
   z-index: -10;
 

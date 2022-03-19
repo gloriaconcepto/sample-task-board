@@ -8,7 +8,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { sideBarTitleContext } from "./index";
 import DashboardManager from "../dashboard/DashBoard";
 const Headers = memo((props) => {
-    const { barTitle} = useContext(sideBarTitleContext);
+    const { barTitle } = useContext(sideBarTitleContext);
     const [invisible, setInvisible] = useState(false);
     useEffect(() => {}, []);
 
@@ -48,7 +48,9 @@ const Headers = memo((props) => {
                     </section>
                 </section>
             </div>
-            <div className="main-app-container"><DashboardManager/></div>
+            <div className="main-app-container">
+                <DashboardManager />
+            </div>
         </React.Fragment>
     );
 });
