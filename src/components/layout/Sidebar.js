@@ -83,8 +83,8 @@ const Sidebar = memo((props) => {
                         <p>Finna A.</p>
                         <p style={{ opacity: 0.4, marginTop: "-1rem" }}>finna@ksg.com</p>
                     </section>
-                    <section>
-                        <KeyboardArrowDownOutlinedIcon sx={{ paddingRight: "12rem", transform: "rotate(180deg)", position: "absolute", opacity: 0.4 }} />
+                    <section style={{ paddingRight: "12rem", transform: "rotate(180deg)", position: "absolute", opacity: 0.4 }}>
+                        <KeyboardArrowDownOutlinedIcon />
                     </section>
                 </section>
             </section>
