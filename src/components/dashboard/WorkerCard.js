@@ -66,7 +66,9 @@ const WorkerCard = memo((props) => {
         setWorkerData((arr) => [...arr, array]);
     };
 
-    return <section className="workers-cards-container">{workerData && workerData[0] && workerData[0].map((value, key) => <Card name={value.name} key={key} role={value.role} url={value.url} />)}</section>;
+    return (<section className="workers-cards-container">{workerData && workerData[0] && workerData[0].map((value, key) => <Card name={value.name} key={key} role={value.role} url={value.url} />)}
+   
+    </section>);
 });
 
 export default WorkerCard;

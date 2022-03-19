@@ -1,6 +1,7 @@
 import React, { memo, useEffect, useState, useContext } from "react";
 import MonthManager from "./MonthRow";
 import WorkerCard from "./WorkerCard";
+import Tasks from "./Tasks";
 import { getMonthYear } from "../../utilities/dateFunctions";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
@@ -27,6 +28,7 @@ const DashboardManager = memo((props) => {
                 </section>
             </section>
             <MonthManager />
+            <Tasks />
             <WorkerCard />
         </section>
     );

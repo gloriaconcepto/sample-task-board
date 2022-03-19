@@ -184,3 +184,107 @@
   top: 14rem;
   z-index: 10;
 }
+
+.tasks-container{
+  position: absolute;
+  top: 15rem;
+  background-color: aliceblue;
+  width: 100%;
+}
+
+.tasks-container-position-8{
+  margin-left: 33rem;
+  width: 37%;
+  /* background-color: #FFF2EA; */
+  height: 3rem;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+}
+.tasks-container-position-inner-8{
+  height: 3rem;
+  border-radius: 3rem;
+  display: flex;
+}
+.tasks-container-percentage-position-8{
+  margin-left: 28rem;
+}
+
+
+.tasks-container-position-2{
+  margin-left: 4rem;
+  width: 71%;
+  height: 3rem;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+}
+.tasks-container-position-inner-2{
+  height: 3rem;
+  border-radius: 3rem;
+  display: flex;
+}
+.tasks-container-percentage-position-2{
+  margin-left: 62rem;
+}
+
+.tasks-container-position-4{
+  margin-left: 18rem;
+  width: 48%;
+  height: 3rem;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+}
+.tasks-container-position-inner-4{
+  height: 3rem;
+  border-radius: 3rem;
+  display: flex;
+}
+.tasks-container-percentage-position-4{
+  margin-left: 40rem;
+}
+
+.tasks-container-position-9{
+  margin-left: 26rem;
+  width: 30%;
+  height: 3rem;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+}
+.tasks-container-position-inner-9{
+  height: 3rem;
+  border-radius: 3rem;
+  display: flex;
+}
+.tasks-container-percentage-position-9{
+  margin-left: 22rem;
+}
+
+.tasks-container-position-7{
+  margin-left: 27rem;
+  width: 49%;
+  height: 3rem;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+}
+.tasks-container-position-inner-7{
+  height: 3rem;
+  border-radius: 3rem;
+  display: flex;
+}
+.tasks-container-percentage-position-7{
+  margin-left: 40rem;
+}
