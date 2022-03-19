@@ -46,3 +46,11 @@ export const getDayName = (days, ispreviousDays) => {
     }
     return day;
 };
+
+export const getMonthYear = () => {
+    const date = new Date();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return `${monthNames[month]} ${year}`;
+};
