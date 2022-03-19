@@ -77,7 +77,7 @@ const Sidebar = memo((props) => {
                         </div>
                     </section>
                 )}
-                <section style={{ display: "flex", marginTop: "10rem" }}>
+                {!isCollapse &&<section style={{ display: "flex", marginTop: "10rem" }}>
                     <Avatar alt=">Finna A." src="static/images/avatars/man3.jpg" sx={{ height: "4rem", width: "4rem", marginRight: "20px" }} />
                     <section style={{ width: "155px" }}>
                         <p>Finna A.</p>
@@ -86,7 +86,7 @@ const Sidebar = memo((props) => {
                     <section style={{ paddingRight: "12rem", transform: "rotate(180deg)", position: "absolute", opacity: 0.4 }}>
                         <KeyboardArrowDownOutlinedIcon />
                     </section>
-                </section>
+                </section>}
             </section>
         </React.Fragment>
     );
