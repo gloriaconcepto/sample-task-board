@@ -10,6 +10,8 @@ import CircleIcon from "@mui/icons-material/Circle";
 import AddCircleSharpIcon from "@mui/icons-material/AddCircleSharp";
 import { sidebarMenus } from "../../utilities/constants";
 import { sideBarTitleContext } from "./index";
+import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+import Avatar from "@mui/material/Avatar";
 //    transform: rotate(270deg);
 const Sidebar = memo((props) => {
     const { setBarTitle } = useContext(sideBarTitleContext);
@@ -75,6 +77,16 @@ const Sidebar = memo((props) => {
                         </div>
                     </section>
                 )}
+                <section style={{ display: "flex", marginTop: "10rem" }}>
+                    <Avatar alt=">Finna A." src="static/images/avatars/man3.jpg" sx={{ height: "4rem", width: "4rem", marginRight: "20px" }} />
+                    <section style={{ width: "155px" }}>
+                        <p>Finna A.</p>
+                        <p style={{ opacity: 0.4, marginTop: "-1rem" }}>finna@ksg.com</p>
+                    </section>
+                    <section>
+                        <KeyboardArrowDownOutlinedIcon sx={{ paddingRight: "12rem", transform: "rotate(180deg)", position: "absolute", opacity: 0.4 }} />
+                    </section>
+                </section>
             </section>
         </React.Fragment>
     );
