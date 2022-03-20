@@ -207,6 +207,7 @@
   height: 3rem;
   border-radius: 3rem;
   display: flex;
+  /* justify-content: space-evenly; */
 }
 .tasks-container-percentage-position-8{
   margin-left: 28rem;
@@ -227,6 +228,7 @@
   height: 3rem;
   border-radius: 3rem;
   display: flex;
+  /* justify-content: space-evenly; */
 }
 .tasks-container-percentage-position-2{
   margin-left: 63rem;
@@ -246,6 +248,7 @@
   height: 3rem;
   border-radius: 3rem;
   display: flex;
+  /* justify-content: space-evenly; */
 }
 .tasks-container-percentage-position-4{
   margin-left: 40rem;
@@ -265,6 +268,7 @@
   height: 3rem;
   border-radius: 3rem;
   display: flex;
+  /* justify-content: space-evenly; */
 }
 .tasks-container-percentage-position-9{
   margin-left: 22rem;
@@ -284,6 +288,7 @@
   height: 3rem;
   border-radius: 3rem;
   display: flex;
+  /* justify-content: space-evenly; */
 }
 .tasks-container-percentage-position-7{
   margin-left: 38rem;

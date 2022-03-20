@@ -45,12 +45,44 @@ let workDataColor = [
         secColor: "#1BD3FC",
     },
 ];
+let assignWork = [
+    {
+        task: "Flow Swift transfer",
+    },
+    {
+        task: "design chat",
+    },
+    {
+        task: "Transaction analytics",
+    },
+    {
+        task: "Setting",
+    },
+    {
+        task: "Api design",
+    },
+    {
+        task: "Documentation",
+    },
+    {
+        task: "Pipeline",
+    },
+    {
+        task: "Jenkins Configs",
+    },
+    {
+        task: "Flow Swift transfer",
+    },
+    {
+        task: "design chat",
+    },
+];
 let Workposition = [8, 9, 2, 7, 4, 8, 9, 2, 7, 4];
 let accum = 0;
 const Tasks = memo((props) => {
     const { setBarLoader } = useContext(barLoaderContext);
     const [workerPos, setWorkerPos] = useState([]);
-    const [taskPercentage, setTaskPercentage] = useState([20, 30, 40, 60, 10, 50, 70, 80, 90, 100]); //
+    const [taskPercentage, setTaskPercentage] = useState([20, 30, 40, 60, 20, 50, 70, 80, 90, 20]); //
     const [isStopWidth, setStopWidth] = useState([false, false, false, false, false, false, false, false, false, false]);
     const myRef = useRef(null);
     const myRef1 = useRef(null);
@@ -486,9 +518,12 @@ const Tasks = memo((props) => {
                 workerPos[0] &&
                 workerPos[0].map((val, index) => (
                     <section className={`tasks-container-position-${val}`} style={{ backgroundColor: `${workDataColor[index].primColor}`, marginBottom: "4rem" }} key={index}>
-                        <section className={`tasks-container-position-inner-${val}`} style={{ backgroundColor: `${workDataColor[index].secColor}`, width: `${isStopWidth[index] ? "100%" : `${taskPercentage[index]}%`}`, color: `${isStopWidth[index] ? "white" : `${workDataColor[index].secColor}`}` }}>
+                        <section className={`tasks-container-position-inner-${val}`} style={{ backgroundColor: `${workDataColor[index].secColor}`, width: `${isStopWidth[index] ? "100%" : `${taskPercentage[index]}%`}` }}>
                             <CircleTwoToneIcon sx={{ marginLeft: "3rem", marginTop: "12px", color: `${workDataColor[index].primColor}` }} />
-                            <p className={`tasks-container-percentage-position-${val}`}>{isStopWidth[index] ? `100%` : `${taskPercentage[index]}%`}</p>
+                            <p style={{ color: "white", paddingLeft: "6px", position: "absolute", paddingLeft: "6rem" }}>{assignWork[index].task}</p>
+                            <p className={`tasks-container-percentage-position-${val}`} style={{ color: `${isStopWidth[index] ? "white" : `${workDataColor[index].secColor}`}` }}>
+                                {isStopWidth[index] ? `100%` : `${taskPercentage[index]}%`}
+                            </p>
                         </section>
                     </section>
                 ))}
