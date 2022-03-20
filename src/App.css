@@ -181,14 +181,14 @@
 }
 .workers-cards-container{
   position:absolute;
-  top: 14rem;
+  top: 20rem;
   z-index: 10;
 }
 
 .tasks-container{
   position: absolute;
-  top: 15rem;
-  background-color: aliceblue;
+  top: 21rem;
+  /* background-color: aliceblue; */
   width: 100%;
 }
 
@@ -229,7 +229,7 @@
   display: flex;
 }
 .tasks-container-percentage-position-2{
-  margin-left: 62rem;
+  margin-left: 63rem;
 }
 
 .tasks-container-position-4{
@@ -271,8 +271,8 @@
 }
 
 .tasks-container-position-7{
-  margin-left: 27rem;
-  width: 49%;
+  margin-left: 23rem;
+  width: 47%;
   height: 3rem;
   border-radius: 3rem;
   -webkit-border-radius: 3rem;
@@ -286,5 +286,39 @@
   display: flex;
 }
 .tasks-container-percentage-position-7{
-  margin-left: 40rem;
+  margin-left: 38rem;
+}
+
+.percentage-loader-container{
+  display: flex;
+}
+.percentage-loader-container-left{
+  margin-left: auto;
+  display: flex;
+  margin-right: 7rem;
+}
+.percentage-loader-container-outer-loader{
+  width: 100%;
+  background-color: aliceblue;
+  height: 8.5px;
+}
+.percentage-loader-container-inner-loader{
+  background-color: #346BF8;
+    width: 109%;
+    height: 100%;
+    max-width: 100%
+}
+
+.invite-border-line{
+  margin-right: 5rem;
+  border: 2.5px;
+  border-style: dashed;
+  border-radius: 18.2px;
+  border-color: #9e9797;
+  height: 2rem;
+  width: 10rem;
+  display: flex;
+  /* margin-top: 3px; */
+  justify-content: center;
+  padding-top: 10px;
 }

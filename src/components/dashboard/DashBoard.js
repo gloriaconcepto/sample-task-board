@@ -5,12 +5,55 @@ import Tasks from "./Tasks";
 import { getMonthYear } from "../../utilities/dateFunctions";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
+import AddIcon from "@mui/icons-material/Add";
+import Avatar from "@mui/material/Avatar";
+import AvatarGroup from "@mui/material/AvatarGroup";
 const DashboardManager = memo((props) => {
     const monthYear = getMonthYear();
     useEffect(() => {}, []);
 
     return (
         <section>
+            <section className="percentage-loader-container">
+                <section>
+                    <h1 style={{ fontSize: "large" }}>GSE BANKING app</h1>
+                    <section style={{ display: "flex", marginTop: "-1rem", marginBottom: "2rem" }}>
+                        <span style={{ marginTop: "-5px", marginRight: "11px", opacity: 0.4 }}>56%</span>
+                        <section className="percentage-loader-container-outer-loader">
+                            {" "}
+                            <section className="percentage-loader-container-inner-loader"></section>
+                        </section>
+                    </section>
+                </section>
+                <section className="percentage-loader-container-left">
+                    <section className="invite-border-line">
+                        <AddIcon sx={{ opacity: 0.4, marginRight: "11px" }} />
+                        <span style={{ opacity: 0.4 }}>Invite</span>
+                    </section>
+                    <section style={{ width: "4rem" }}>
+                        <AvatarGroup max={4} spacing="small">
+                            <Avatar alt="Remy Sharp" src="static/images/avatars/woman2.jpg" />
+                            <Avatar alt="Travis Howard" src="static/images/avatars/man5.jpg" />
+                            <Avatar alt="Cindy Baker" src="static/images/avatars/man4.jpg" />
+                            <Avatar alt="Agnes Walker" src="static/images/avatars/woman4.jpg" />
+                            <Avatar alt="Trevor Henderson" src="static/images/avatars/man3.jpg" />
+                            <Avatar alt="Cindy Baker" src="static/images/avatars/man4.jpg" />
+                            <Avatar alt="Agnes Walker" src="static/images/avatars/woman4.jpg" />
+                            <Avatar alt="Trevor Henderson" src="static/images/avatars/man3.jpg" />
+                            <Avatar alt="Agnes Walker" src="static/images/avatars/woman4.jpg" />
+                            <Avatar alt="Trevor Henderson" src="static/images/avatars/man3.jpg" />
+                            <Avatar alt="Cindy Baker" src="static/images/avatars/man4.jpg" />
+                            <Avatar alt="Agnes Walker" src="static/images/avatars/woman4.jpg" />
+                            <Avatar alt="Trevor Henderson" src="static/images/avatars/man3.jpg" />
+                            <Avatar alt="Agnes Walker" src="static/images/avatars/woman4.jpg" />
+                            <Avatar alt="Trevor Henderson" src="static/images/avatars/man3.jpg" />
+                            <Avatar alt="Cindy Baker" src="static/images/avatars/man4.jpg" />
+                            <Avatar alt="Agnes Walker" src="static/images/avatars/woman4.jpg" />
+                            <Avatar alt="Trevor Henderson" src="static/images/avatars/man3.jpg" />
+                        </AvatarGroup>
+                    </section>
+                </section>
+            </section>
             <section style={{ display: "flex", marginBottom: "2rem" }}>
                 <section>
                     <p>{monthYear}</p>
