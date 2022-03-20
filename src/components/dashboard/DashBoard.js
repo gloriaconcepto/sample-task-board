@@ -8,7 +8,9 @@ import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import AddIcon from "@mui/icons-material/Add";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
+import { barLoaderContext } from "../layout/index";
 const DashboardManager = memo((props) => {
+    const { barLoader } = useContext(barLoaderContext);
     const monthYear = getMonthYear();
     useEffect(() => {}, []);
 
@@ -18,10 +20,10 @@ const DashboardManager = memo((props) => {
                 <section>
                     <h1 style={{ fontSize: "large" }}>GSE BANKING app</h1>
                     <section style={{ display: "flex", marginTop: "-1rem", marginBottom: "2rem" }}>
-                        <span style={{ marginTop: "-5px", marginRight: "11px", opacity: 0.4 }}>56%</span>
+                        <span style={{ marginTop: "-5px", marginRight: "11px", opacity: 0.4 }}>{`${barLoader}%`}</span>
                         <section className="percentage-loader-container-outer-loader">
                             {" "}
-                            <section className="percentage-loader-container-inner-loader"></section>
+                            <section className="percentage-loader-container-inner-loader" style={{ width: `${barLoader}%` }}></section>
                         </section>
                     </section>
                 </section>
