@@ -327,3 +327,20 @@
   justify-content: center;
   padding-top: 10px;
 }
+
+.vertical-ruler-container{
+  position: absolute;
+    top: 20rem;
+    right: 37rem;
+    display: flex;
+    flex-direction: column;
+}
+.vertical-line-ruler{
+  display: inline-block;
+  border-left: 2px solid #346BF8;
+  /* margin: 0 10px; */
+  height: 300vh;
+  /* opacity: 0.3; */
+  /* z-index: -10; */
+
+}

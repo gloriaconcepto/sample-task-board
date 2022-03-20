@@ -8,6 +8,7 @@ import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import AddIcon from "@mui/icons-material/Add";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
+import CircleIcon from "@mui/icons-material/Circle";
 import { barLoaderContext } from "../layout/index";
 const DashboardManager = memo((props) => {
     const { barLoader } = useContext(barLoaderContext);
@@ -74,6 +75,10 @@ const DashboardManager = memo((props) => {
             </section>
             <MonthManager />
             <Tasks />
+            <section className="vertical-ruler-container">
+                <CircleIcon sx={{ color: "#346BF8", fontSize: 20, marginLeft: "-8px" }} />
+                <span className="vertical-line-ruler"></span>
+            </section>
             <WorkerCard />
         </section>
     );
