@@ -1,5 +1,11 @@
 # A simple Task-Board App
 
+##
+ [Demo](https://task-board-react-app.web.app/)
+
+This app was inspire by Dmitry Lauretsky ui design
+
+Visit Dmitry link at dribble [https://dribbble.com/shots/15375548/attachments/7138254?mode=media](https://dribbble.com/shots/15375548/attachments/7138254?mode=media)
 
 ## Technologies
 - React.js
