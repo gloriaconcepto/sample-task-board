@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useState, useContext } from "react";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+import CircleIcon from "@mui/icons-material/Circle";
 import { getDay, getDayName } from "../../utilities/dateFunctions";
 const MonthManager = memo((props) => {
     const [daysNums, setDaysNums] = useState([]);
@@ -34,7 +35,6 @@ const MonthManager = memo((props) => {
     return (
         <React.Fragment>
             <div className="month-calendar-container">
-               
                 <section className="month-calendar-container-one">
                     {daysNums &&
                         daysNums.map((val, id) =>
@@ -51,6 +51,10 @@ const MonthManager = memo((props) => {
                             )
                         )}
                 </section>
+                <section className="vertical-ruler-container">
+                <CircleIcon sx={{ color: "#346BF8", fontSize: 20, marginLeft: "-8px" }} />
+                <span className="vertical-line-ruler"></span>
+            </section>
                 <section className="month-calendar-container-one">{dividerGrid()}</section>
             </div>
         </React.Fragment>

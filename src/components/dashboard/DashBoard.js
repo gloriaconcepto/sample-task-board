@@ -75,10 +75,7 @@ const DashboardManager = memo((props) => {
             </section>
             <MonthManager />
             <Tasks />
-            <section className="vertical-ruler-container">
-                <CircleIcon sx={{ color: "#346BF8", fontSize: 20, marginLeft: "-8px" }} />
-                <span className="vertical-line-ruler"></span>
-            </section>
+           
             <WorkerCard />
         </section>
     );

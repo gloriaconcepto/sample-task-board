@@ -1,4 +1,5 @@
 import React, { memo, useEffect, useState, useContext } from "react";
+import CircleIcon from "@mui/icons-material/Circle";
 import Card from "../../utilities/cards";
 const workers = [
     {
@@ -67,7 +68,10 @@ const WorkerCard = memo((props) => {
     };
 
     return (<section className="workers-cards-container">{workerData && workerData[0] && workerData[0].map((value, key) => <Card name={value.name} key={key} role={value.role} url={value.url} />)}
-   
+    {/* <section className="vertical-ruler-container">
+                <CircleIcon sx={{ color: "#346BF8", fontSize: 20, marginLeft: "-8px" }} />
+                <span className="vertical-line-ruler"></span>
+            </section> */}
     </section>);
 });
 
